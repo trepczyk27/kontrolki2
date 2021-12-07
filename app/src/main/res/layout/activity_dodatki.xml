@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dodatkiActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tekst1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below=""
+        android:textSize="26sp"
+        android:text="Kawa: "/>
+
+    <Spinner
+        android:id="@+id/jakaKawa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst1"/>
+
+    <TextView
+        android:id="@+id/tekst2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/jakaKawa"
+        android:textSize="26sp"
+        android:text="Wielkość: "/>
+
+
+
+        <RadioGroup
+            android:id="@+id/wielkosc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tekst2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mała"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="średnia"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="duża"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </RadioGroup>
+
+
+
+    <TextView
+        android:id="@+id/tekst3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/wielkosc"
+        android:textSize="26sp"
+        android:text="Dodatki: "/>
+
+    <LinearLayout
+        android:id="@+id/checkboxy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst3"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/cukier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cukier"/>
+
+        <CheckBox
+            android:id="@+id/miod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Miód"/>
+
+        <CheckBox
+            android:id="@+id/mleko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mleko"/>
+
+        <CheckBox
+            android:id="@+id/przypawy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Przyprawy"/>
+
+        <Spinner
+            android:id="@+id/jakiePrzyprawy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cofnij"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkboxy"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentLeft="true"
+        android:text="COFNIJ"/>
+
+    <Button
+        android:id="@+id/dalej"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkboxy"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentRight="true"
+        android:text="DALEJ"/>
+
+</RelativeLayout>

@@ -52,14 +52,18 @@
         android:id="@+id/cofnij"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick=""
+        android:layout_below="@id/wprowadzTelefon"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentLeft="true"
         android:text="COFNIJ"/>
 
     <Button
         android:id="@+id/dalej"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick=""
+        android:layout_marginTop="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/wprowadzTelefon"
         android:text="Dalej"/>
 
 </RelativeLayout>
