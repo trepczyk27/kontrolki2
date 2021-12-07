@@ -13,4 +13,5 @@
         <item>Kardamon</item>
         <item>Wanilia</item>
     </string-array>
+    <string name="zamow">Twoje zamówienie jest w trakcie realizacji</string>
 </resources>
