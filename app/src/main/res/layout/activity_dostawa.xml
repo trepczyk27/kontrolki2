@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dostawaActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tekst1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Miejsce Dostawy"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/tekst2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst1"
+        android:layout_marginTop="30dp"
+        android:textSize="26sp"
+        android:text="Adres: "/>
+
+    <EditText
+        android:id="@+id/wprowadzAdres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst2"
+        android:layout_marginLeft="40dp"/>
+
+    <TextView
+        android:id="@+id/tekst3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wprowadzAdres"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:text="Telefon: "/>
+
+    <EditText
+        android:id="@+id/wprowadzTelefon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst3"
+        android:layout_marginLeft="40dp"/>
+
+    <Button
+        android:id="@+id/cofnij"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick=""
+        android:text="COFNIJ"/>
+
+    <Button
+        android:id="@+id/dalej"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick=""
+        android:text="Dalej"/>
+
+</RelativeLayout>
