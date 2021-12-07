@@ -3,12 +3,16 @@ package com.fpp.kontrolki;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 
 public class dodatkiActivity extends AppCompatActivity {
 
     private Spinner kawy, przyprawy;
+
+    String kawa, wielkosc, dodatek;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,5 +30,24 @@ public class dodatkiActivity extends AppCompatActivity {
                 R.array.przyprawy_array, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         przyprawy.setAdapter(adapter2);
+    }
+
+    public void rozmiar(View view){
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch(view.getId()) {
+            case R.id.mala:
+                if (checked)
+                    wielkosc = "MALA";
+                break;
+            case R.id.srednia:
+                if (checked)
+                    wielkosc = "SREDNIA";
+                break;
+            case R.id.duza:
+                if (checked)
+                    wielkosc = "DUZA";
+                break;
+        }
     }
 }
