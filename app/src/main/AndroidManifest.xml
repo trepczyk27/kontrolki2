@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kontrolki">
         <activity
+            android:name=".podsumowanieActivity"
+            android:exported="false" />
+        <activity
             android:name=".dodatkiActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".podsumowanieActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tekst1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Twoja zamówienie"
+        android:textSize="26sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/tekst2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst1"
+        android:layout_marginTop="40dp"
+        android:text="Kawa wielkosc jaka z dodatkiem: "
+        />
+
+    <TextView
+        android:id="@+id/tekst3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst2"
+        android:text="- dodatek1 \n- dodatek2 \n- dodatek3"
+        />
+
+    <TextView
+        android:id="@+id/tekst4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst3"
+        android:layout_marginTop="40dp"
+        android:text="Dane zamawiającego"
+        />
+    <TextView
+        android:id="@+id/tekst5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst4"
+        android:layout_marginLeft="20dp"
+        android:text="adres: "
+        />
+    <TextView
+        android:id="@+id/tekst6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst5"
+        android:layout_marginLeft="20dp"
+        android:text="telefon: "
+        />
+    <TextView
+        android:id="@+id/tekst7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst6"
+        android:layout_marginTop="80dp"
+        android:text="akceptuje regulamin "
+        android:textSize="21sp"
+        />
+
+    <Switch
+        android:id="@+id/regulamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst6"
+        android:layout_marginTop="80dp"
+        android:layout_toRightOf="@id/tekst7"/>
+
+    <Button
+        android:id="@+id/dalej"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regulamin"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:text="dalej"/>
+
+
+</RelativeLayout>

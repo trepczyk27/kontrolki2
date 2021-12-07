@@ -2,15 +2,18 @@ package com.fpp.kontrolki;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
 public class dodatkiActivity extends AppCompatActivity {
 
     private Spinner kawy, przyprawy;
+    private Button cofnij, dalej;
 
     String kawa, wielkosc, dodatek;
 
@@ -18,6 +21,25 @@ public class dodatkiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dodatki);
+
+        cofnij = findViewById(R.id.cofnij);
+        dalej = findViewById(R.id.dalej);
+
+        cofnij.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cofnij = new Intent(dodatkiActivity.this, dostawaActivity.class);
+                startActivity(cofnij);
+            }
+        });
+
+        dalej.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dalej = new Intent(dodatkiActivity.this, podsumowanieActivity.class);
+                startActivity(dalej);
+            }
+        });
 
         kawy = findViewById(R.id.jakaKawa);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
