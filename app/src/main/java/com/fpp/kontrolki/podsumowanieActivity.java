@@ -15,7 +15,7 @@ public class podsumowanieActivity extends AppCompatActivity {
     private Button dalej;
     private Switch aSwitch;
 
-    private TextView jkawa, jwielkosc, jdodatek, jadres, jtelefon;
+    private TextView jkawa, jadres, jtelefon;
 
     String kawa, wielkosc, dodatek, adres, telefon;
 
@@ -37,8 +37,13 @@ public class podsumowanieActivity extends AppCompatActivity {
         }
 
         jkawa = findViewById(R.id.tekst2);
+        jadres = findViewById(R.id.tekst5);
+        jtelefon = findViewById(R.id.tekst6);
+
 
         jkawa.setText("Kawa "+ kawa + " " + wielkosc + " z dodatkiem: ");
+        jadres.setText("adres: " + adres);
+        jtelefon.setText("telefon: " + telefon);
 
 
         dalej = findViewById(R.id.dalej);

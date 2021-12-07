@@ -99,15 +99,15 @@ public class dodatkiActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.mala:
                 if (checked)
-                    wielkosc = "MALA";
+                    wielkosc = "mała";
                 break;
             case R.id.srednia:
                 if (checked)
-                    wielkosc = "SREDNIA";
+                    wielkosc = "średnia";
                 break;
             case R.id.duza:
                 if (checked)
-                    wielkosc = "DUZA";
+                    wielkosc = "duża";
                 break;
         }
     }
