@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
@@ -16,7 +17,8 @@ public class dodatkiActivity extends AppCompatActivity {
     private Spinner kawy, przyprawy;
     private Button cofnij, dalej;
 
-    String kawa, wielkosc, dodatek, adres, telefon;
+    String kawa, wielkosc, adres, telefon, zListy;
+    String dodatek = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,9 @@ public class dodatkiActivity extends AppCompatActivity {
         dalej.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(przyprawy.isEnabled()){
+                    dodatek += zListy;
+                }
                 Intent dalej = new Intent(dodatkiActivity.this, podsumowanieActivity.class);
                 dalej.putExtra("Adres", adres);
                 dalej.putExtra("Telefon", telefon);
@@ -83,7 +88,7 @@ public class dodatkiActivity extends AppCompatActivity {
         przyprawy.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                dodatek = adapter2.getItem(position).toString();
+                zListy = adapter2.getItem(position).toString().toLowerCase();
             }
 
             @Override
@@ -108,6 +113,47 @@ public class dodatkiActivity extends AppCompatActivity {
             case R.id.duza:
                 if (checked)
                     wielkosc = "duża";
+                break;
+        }
+    }
+
+    public void checkboxClicked(View view){
+        boolean checked = ((CheckBox) view).isChecked();
+
+        switch (view.getId()){
+            case R.id.cukier:
+                if(checked){
+                    dodatek += "cukier";
+                }else{
+
+                }
+                break;
+
+            case R.id.miod:
+                if(checked){
+                    dodatek += "miod";
+                }else{
+
+                }
+                break;
+
+            case R.id.mleko:
+                if(checked){
+                    dodatek += "mleko";
+                }else{
+
+                }
+                break;
+
+            case R.id.przypawy:
+                if(checked){
+                    przyprawy.setEnabled(true);
+                    przyprawy.setVisibility(View.VISIBLE);
+
+                }else{
+                    przyprawy.setVisibility(View.GONE);
+                    przyprawy.setEnabled(false);
+                }
                 break;
         }
     }

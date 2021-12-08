@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tekst3"
         android:layout_marginTop="40dp"
-        android:text="Dane zamawiającego"
+        android:text="Dane zamawiającego: "
         />
     <TextView
         android:id="@+id/tekst5"

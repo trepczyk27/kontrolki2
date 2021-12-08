@@ -87,30 +87,35 @@
             android:id="@+id/cukier"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="checkboxClicked"
             android:text="Cukier"/>
 
         <CheckBox
             android:id="@+id/miod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="checkboxClicked"
             android:text="Miód"/>
 
         <CheckBox
             android:id="@+id/mleko"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="checkboxClicked"
             android:text="Mleko"/>
 
         <CheckBox
             android:id="@+id/przypawy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="checkboxClicked"
             android:text="Przyprawy"/>
 
         <Spinner
             android:id="@+id/jakiePrzyprawy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_marginLeft="40dp"/>
 
     </LinearLayout>
