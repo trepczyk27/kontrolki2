@@ -20,6 +20,10 @@ public class dodatkiActivity extends AppCompatActivity {
     String kawa, wielkosc, adres, telefon, zListy;
     String dodatek = "";
 
+    Boolean cukierB = false;
+    Boolean miodB = false;
+    Boolean mlekoB = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,15 @@ public class dodatkiActivity extends AppCompatActivity {
         dalej.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(cukierB){
+                    dodatek += "cukier";
+                }
+                if(miodB){
+                    dodatek += "miod";
+                }
+                if(mlekoB){
+                    dodatek += "mleko";
+                }
                 if(przyprawy.isEnabled()){
                     dodatek += zListy;
                 }
@@ -123,34 +136,39 @@ public class dodatkiActivity extends AppCompatActivity {
         switch (view.getId()){
             case R.id.cukier:
                 if(checked){
-                    dodatek += "cukier";
-                }else{
+                    cukierB = true;
 
+                }else{
+                    cukierB = false;
                 }
                 break;
 
             case R.id.miod:
                 if(checked){
-                    dodatek += "miod";
-                }else{
+                    miodB = true;
 
+                }else{
+                    miodB = false;
                 }
                 break;
 
             case R.id.mleko:
                 if(checked){
-                    dodatek += "mleko";
-                }else{
+                    mlekoB = true;
 
+                }else{
+                    mlekoB = false;
                 }
                 break;
 
             case R.id.przypawy:
                 if(checked){
+
                     przyprawy.setEnabled(true);
                     przyprawy.setVisibility(View.VISIBLE);
 
                 }else{
+
                     przyprawy.setVisibility(View.GONE);
                     przyprawy.setEnabled(false);
                 }
