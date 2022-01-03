@@ -1,17 +1,18 @@
 <resources>
     <string name="app_name">kontrolki</string>
-    <string-array name="kawy_array">
-        <item>Espresso</item>
-        <item>Cappuccino</item>
-        <item>Latte</item>
-        <item>Americano</item>
+    <string-array name="jakaMarka_array">
+        <item>Ford</item>
+        <item>Mercedes </item>
+        <item>Porshe </item>
+        <item>Nissan </item>
     </string-array>
-    <string-array name="przyprawy_array">
-        <item>Kakao</item>
-        <item>Cynamon</item>
-        <item>Imbir</item>
-        <item>Kardamon</item>
-        <item>Wanilia</item>
+    <string-array name="jakiModel_array">
+
+        <item>Nissan GTR</item>
+        <item>Porshe Cayman</item>
+        <item>Ford Shelby Cobra</item>
+        <item>Mercedes AMG GT</item>
+        <item>Mercedes Klasa G</item>
     </string-array>
-    <string name="zamow">Twoje zamówienie jest w trakcie realizacji</string>
+    <string name="zamow">Twoj samochód jest przygotowywyany do jazdy</string>
 </resources>

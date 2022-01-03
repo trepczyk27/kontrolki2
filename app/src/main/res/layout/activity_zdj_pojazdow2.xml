@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dostawaActivity"
+    android:padding="20dp"
+    android:background="@color/green">
+
+    <TextView
+        android:id="@+id/tekst1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Dane Wynajmującego"
+        android:textSize="30sp" />
+
+
+    <TextView
+        android:id="@+id/tekst2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst1"
+        android:layout_marginTop="30dp"
+        android:text="Imie i Nazwisko: "
+        android:textSize="26sp" />
+
+    <EditText
+        android:id="@+id/wprowadzAdres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst2"
+        android:layout_marginLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tekst3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wprowadzAdres"
+        android:layout_marginTop="40dp"
+        android:text="Telefon: "
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/dataUro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wprowadzTelefon"
+        android:text="Wprowadź datę urtodzenia"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/wprowadzDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dataUro"
+        android:layout_marginLeft="40dp"
+        android:inputType="phone" />/>
+
+    <EditText
+        android:id="@+id/wprowadzTelefon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst3"
+        android:layout_marginLeft="40dp"
+        android:inputType="phone" />
+
+    <CheckBox
+        android:id="@+id/pelnoletnosc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wprowadzDate"
+        android:enabled="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pelnoletnosc"
+        android:text="Zaznacz jesli jestes pełoletni" />
+
+    <Button
+        android:id="@+id/cofnij"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wprowadzDate"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="100dp"
+        android:text="COFNIJ" />
+
+    <Button
+        android:id="@+id/dalej"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/wprowadzDate"
+        android:text="Dalej"/>
+
+
+</RelativeLayout>

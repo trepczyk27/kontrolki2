@@ -5,118 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".dodatkiActivity"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:background="@color/green">
 
     <TextView
         android:id="@+id/tekst1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="26sp"
-        android:text="Kawa: "/>
+        android:text="Marka pojazdu: "
+        android:textSize="26sp" />
 
     <Spinner
-        android:id="@+id/jakaKawa"
+        android:id="@+id/jakaMarka"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tekst1"/>
-
-    <TextView
-        android:id="@+id/tekst2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/jakaKawa"
-        android:textSize="26sp"
-        android:text="Wielkość: "/>
-
-
-
-        <RadioGroup
-            android:id="@+id/wielkosc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tekst2"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-                <RadioButton
-                    android:id="@+id/mala"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="mała"
-                    android:onClick="rozmiar"
-                    android:layout_weight="1"/>
-
-                <RadioButton
-                    android:id="@+id/srednia"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="średnia"
-                    android:onClick="rozmiar"
-                    android:layout_weight="1"/>
-
-                <RadioButton
-                    android:id="@+id/duza"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="duża"
-                    android:onClick="rozmiar"
-                    android:layout_weight="1"/>
-
-        </RadioGroup>
-
+        android:layout_below="@id/tekst1" />
 
 
     <TextView
         android:id="@+id/tekst3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/wielkosc"
-        android:textSize="26sp"
-        android:text="Dodatki: "/>
+        android:layout_below="@id/jakiModel"
+        android:layout_marginTop="-71dp"
+        android:text="Model pojazdu: "
+        android:textSize="26sp" />
+
+    <Spinner
+        android:id="@+id/jakiModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst1"
+        android:layout_marginTop="95dp" />
 
     <LinearLayout
         android:id="@+id/checkboxy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tekst3"
+        android:layout_marginTop="71dp"
         android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/cukier"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checkboxClicked"
-            android:text="Cukier"/>
 
-        <CheckBox
-            android:id="@+id/miod"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checkboxClicked"
-            android:text="Miód"/>
 
-        <CheckBox
-            android:id="@+id/mleko"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checkboxClicked"
-            android:text="Mleko"/>
 
-        <CheckBox
-            android:id="@+id/przypawy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="checkboxClicked"
-            android:text="Przyprawy"/>
 
-        <Spinner
-            android:id="@+id/jakiePrzyprawy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginLeft="40dp"/>
+
 
     </LinearLayout>
 
@@ -137,5 +71,11 @@
         android:layout_marginTop="40dp"
         android:layout_alignParentRight="true"
         android:text="DALEJ"/>
-
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+    android:layout_below="@+id/cofnij"
+    android:text="PS:Zdjecia dostepnych pojazdow na poprzedniej stronie"/>
 </RelativeLayout>

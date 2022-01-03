@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         dalej.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, dostawaActivity.class);
+                Intent intent = new Intent(MainActivity.this, zdjPojazdow2.class);
                 startActivity(intent);
             }
         });

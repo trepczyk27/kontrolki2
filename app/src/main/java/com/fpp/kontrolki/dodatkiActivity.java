@@ -14,15 +14,13 @@ import android.widget.Spinner;
 
 public class dodatkiActivity extends AppCompatActivity {
 
-    private Spinner kawy, przyprawy;
+    private Spinner marka, model;
     private Button cofnij, dalej;
 
-    String kawa, wielkosc, adres, telefon, zListy;
-    String dodatek = "";
+    String  Marka, adres, telefon,zListy;
 
-    Boolean cukierB = false;
-    Boolean miodB = false;
-    Boolean mlekoB = false;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,44 +50,35 @@ public class dodatkiActivity extends AppCompatActivity {
         dalej.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(cukierB){
-                    dodatek += "cukier";
-                }
-                if(miodB){
-                    dodatek += "miod";
-                }
-                if(mlekoB){
-                    dodatek += "mleko";
-                }
-                if(przyprawy.isEnabled()){
-                    dodatek += zListy;
+
+                if(model.isEnabled()){
+
                 }
                 Intent dalej = new Intent(dodatkiActivity.this, podsumowanieActivity.class);
                 dalej.putExtra("Adres", adres);
                 dalej.putExtra("Telefon", telefon);
-                dalej.putExtra("Wielkosc", wielkosc);
-                dalej.putExtra("Kawa", kawa);
-                dalej.putExtra("Dodatek", dodatek);
+
+                dalej.putExtra("Marka", Marka);
                 startActivity(dalej);
             }
         });
 
-        kawy = findViewById(R.id.jakaKawa);
+        marka= findViewById(R.id.jakaMarka);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
-                R.array.kawy_array, android.R.layout.simple_spinner_item);
+                R.array.jakaMarka_array, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        kawy.setAdapter(adapter1);
+        marka.setAdapter(adapter1);
 
-        przyprawy = findViewById(R.id.jakiePrzyprawy);
+        model = findViewById(R.id.jakiModel);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
-                R.array.przyprawy_array, android.R.layout.simple_spinner_item);
+                R.array.jakiModel_array, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        przyprawy.setAdapter(adapter2);
+        model.setAdapter(adapter2);
 
-        kawy.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        marka.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                kawa = adapter1.getItem(position).toString();
+                Marka = adapter1.getItem(position).toString();
             }
 
             @Override
@@ -98,7 +87,7 @@ public class dodatkiActivity extends AppCompatActivity {
             }
         });
 
-        przyprawy.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        model.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 zListy = adapter2.getItem(position).toString().toLowerCase();
@@ -111,66 +100,23 @@ public class dodatkiActivity extends AppCompatActivity {
         });
     }
 
-    public void rozmiar(View view){
-        boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.mala:
-                if (checked)
-                    wielkosc = "mała";
-                break;
-            case R.id.srednia:
-                if (checked)
-                    wielkosc = "średnia";
-                break;
-            case R.id.duza:
-                if (checked)
-                    wielkosc = "duża";
-                break;
-        }
-    }
 
     public void checkboxClicked(View view){
         boolean checked = ((CheckBox) view).isChecked();
 
         switch (view.getId()){
-            case R.id.cukier:
-                if(checked){
-                    cukierB = true;
 
-                }else{
-                    cukierB = false;
-                }
-                break;
-
-            case R.id.miod:
-                if(checked){
-                    miodB = true;
-
-                }else{
-                    miodB = false;
-                }
-                break;
-
-            case R.id.mleko:
-                if(checked){
-                    mlekoB = true;
-
-                }else{
-                    mlekoB = false;
-                }
-                break;
-
-            case R.id.przypawy:
+            case R.id.jakiModel:
                 if(checked){
 
-                    przyprawy.setEnabled(true);
-                    przyprawy.setVisibility(View.VISIBLE);
+                    model.setEnabled(true);
+                    model.setVisibility(View.VISIBLE);
 
                 }else{
 
-                    przyprawy.setVisibility(View.GONE);
-                    przyprawy.setEnabled(false);
+                    model.setVisibility(View.GONE);
+                    model.setEnabled(false);
                 }
                 break;
         }
