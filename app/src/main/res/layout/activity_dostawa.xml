@@ -7,101 +7,64 @@
     tools:context=".dostawaActivity"
     android:padding="20dp"
     android:background="@color/green">
-
     <TextView
-        android:id="@+id/jd"
+        android:id="@+id/tekst1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dostępne Modele samochodów"
-        android:textSize="25dp"/>
-<TextView
-    android:layout_marginTop="15dp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Mercedes AMG GT"
-    android:textSize="15dp"
-    android:layout_below="@+id/jd"
-    android:id="@+id/mercGt"/>
+        android:textSize="30sp"
+        android:text="Miejsce Dostawy"
+        android:layout_centerHorizontal="true"/>
 
-    <ImageView
-        android:id="@+id/img1"
-        android:layout_width="292dp"
-        android:layout_height="81dp"
-        android:layout_below="@+id/mercGt"
-        android:layout_marginTop="11dp"
-        android:src="@drawable/gt_merc" />
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/img1"
-    android:layout_marginTop="15dp"
-    android:text="Ford Shelby Cobra"
-    android:id="@+id/cobra"/>
 
-    <ImageView
-        android:id="@+id/img2"
-        android:layout_width="290dp"
-        android:layout_height="81dp"
-        android:layout_below="@+id/cobra"
-        android:layout_marginTop="11dp"
-        android:src="@drawable/shleby" />
     <TextView
+        android:id="@+id/tekst2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/img2"
-        android:layout_marginTop="15dp"
-        android:text="Ford Mustang GTR"
-        android:id="@+id/gtr"/>
+        android:layout_below="@id/tekst1"
+        android:layout_marginTop="30dp"
+        android:textSize="26sp"
+        android:text="Adres: "/>
 
-    <ImageView
-        android:id="@+id/img3"
-        android:layout_width="290dp"
-        android:layout_height="81dp"
-        android:layout_below="@+id/gtr"
-        android:layout_marginTop="11dp"
-        android:src="@drawable/gtr2" />
+    <EditText
+        android:id="@+id/wprowadzAdres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tekst2"
+        android:layout_marginLeft="40dp"/>
+
     <TextView
+        android:id="@+id/tekst3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/img3"
-        android:layout_marginTop="15dp"
-        android:text="Porshe Cayman"
-        android:id="@+id/cayman"/>
+        android:layout_below="@id/wprowadzAdres"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:text="Telefon: "/>
 
-    <ImageView
-        android:id="@+id/img4"
-        android:layout_width="290dp"
-        android:layout_height="81dp"
-        android:layout_below="@+id/cayman"
-        android:layout_marginTop="11dp"
-        android:src="@drawable/cayman" />
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/wprowadzTelefon"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/img4"
-        android:layout_marginTop="15dp"
-        android:text="Porshe Cayman"
-        android:id="@+id/klasG"/>
-
-    <ImageView
-        android:id="@+id/img5"
-        android:layout_width="279dp"
-        android:layout_height="69dp"
-        android:layout_below="@+id/klasG"
-        android:layout_marginTop="11dp"
-        android:src="@drawable/klasa_g" />
+        android:layout_below="@id/tekst3"
+        android:inputType="phone"
+        android:layout_marginLeft="40dp"/>
 
     <Button
+        android:id="@+id/cofnij"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/img5"
-        android:text="cofnij"
-        android:id="@+id/button1"/>
+        android:layout_below="@id/wprowadzTelefon"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="100dp"
+        android:text="COFNIJ" />
+
     <Button
+        android:id="@+id/dalej"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/img5"
-        android:layout_toRightOf="@id/img5"
-        android:id="@+id/button2"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/wprowadzTelefon"
         android:text="Dalej"/>
+
 </RelativeLayout>

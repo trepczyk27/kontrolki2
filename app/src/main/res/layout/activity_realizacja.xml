@@ -22,16 +22,15 @@
         android:id="@+id/opinia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/realizacjatxt"
+        android:text="Podziel się swoja opinią: "
+        android:textSize="24sp"
         android:layout_marginTop="40dp"
-        android:text="Jeśli możesz pozostaw opinię o naszej firmie dziękujemy :) "
-        android:textSize="24sp" />
+        android:layout_below="@id/realizacjatxt"/>
 
     <RatingBar
         android:id="@+id/ocena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_below="@id/opinia"
         android:layout_centerHorizontal="true"
         android:rating="0"
@@ -39,3 +38,4 @@
 
 
 </RelativeLayout>
+

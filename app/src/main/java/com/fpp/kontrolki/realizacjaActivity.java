@@ -20,9 +20,9 @@ public class realizacjaActivity extends AppCompatActivity {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
                 if(v < 4){
-                    Toast.makeText(realizacjaActivity.this, "Dziękujemy za opinię weźmiemy to pod uwagę", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(realizacjaActivity.this, "Dziękujemy za opinię", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(realizacjaActivity.this, "Dziękujemy za dobrą opinię;)", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(realizacjaActivity.this, "Dziękujemy za dobrą opinię", Toast.LENGTH_SHORT).show();
                 }
             }
         });

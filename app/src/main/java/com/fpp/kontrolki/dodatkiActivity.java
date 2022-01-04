@@ -14,11 +14,11 @@ import android.widget.Spinner;
 
 public class dodatkiActivity extends AppCompatActivity {
 
-    private Spinner marka, model;
+    private Spinner Marka, model;
     private Button cofnij, dalej;
 
-    String  Marka, adres, telefon,zListy;
-
+    String marka, adres, telefon, zListy;
+    String dodatek = "";
 
 
 
@@ -26,7 +26,7 @@ public class dodatkiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dodatki);
-        //pobranie z poprzedniego activity
+
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
 
@@ -50,24 +50,24 @@ public class dodatkiActivity extends AppCompatActivity {
         dalej.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if(model.isEnabled()){
-
+                    dodatek += zListy;
                 }
                 Intent dalej = new Intent(dodatkiActivity.this, podsumowanieActivity.class);
                 dalej.putExtra("Adres", adres);
                 dalej.putExtra("Telefon", telefon);
 
-                dalej.putExtra("Marka", Marka);
+                dalej.putExtra("Kawa", marka);
+                dalej.putExtra("Model", dodatek);
                 startActivity(dalej);
             }
         });
 
-        marka= findViewById(R.id.jakaMarka);
+        Marka = findViewById(R.id.jakaMarka);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
                 R.array.jakaMarka_array, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        marka.setAdapter(adapter1);
+        Marka.setAdapter(adapter1);
 
         model = findViewById(R.id.jakiModel);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
@@ -75,10 +75,10 @@ public class dodatkiActivity extends AppCompatActivity {
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         model.setAdapter(adapter2);
 
-        marka.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        Marka.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Marka = adapter1.getItem(position).toString();
+                marka = adapter1.getItem(position).toString();
             }
 
             @Override
@@ -106,6 +106,7 @@ public class dodatkiActivity extends AppCompatActivity {
         boolean checked = ((CheckBox) view).isChecked();
 
         switch (view.getId()){
+
 
             case R.id.jakiModel:
                 if(checked){

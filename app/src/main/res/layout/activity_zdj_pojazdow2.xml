@@ -9,93 +9,100 @@
     android:background="@color/green">
 
     <TextView
-        android:id="@+id/tekst1"
+        android:id="@+id/jd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Dane Wynajmującego"
-        android:textSize="30sp" />
+        android:text="Dostępne Modele samochodów"
+        android:textSize="25dp"/>
+<TextView
+    android:layout_marginTop="15dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Mercedes AMG GT"
+    android:textSize="15dp"
+    android:layout_below="@+id/jd"
+    android:id="@+id/mercGt"/>
 
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="292dp"
+        android:layout_height="81dp"
+        android:layout_below="@+id/mercGt"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/gt_merc" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/img1"
+    android:layout_marginTop="15dp"
+    android:text="Ford Shelby Cobra"
+    android:id="@+id/cobra"/>
 
-    <TextView
-        android:id="@+id/tekst2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tekst1"
-        android:layout_marginTop="30dp"
-        android:text="Imie i Nazwisko: "
-        android:textSize="26sp" />
-
-    <EditText
-        android:id="@+id/wprowadzAdres"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tekst2"
-        android:layout_marginLeft="40dp" />
-
-    <TextView
-        android:id="@+id/tekst3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/wprowadzAdres"
-        android:layout_marginTop="40dp"
-        android:text="Telefon: "
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/dataUro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wprowadzTelefon"
-        android:text="Wprowadź datę urtodzenia"
-        android:textSize="25sp" />
-
-    <EditText
-        android:id="@+id/wprowadzDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dataUro"
-        android:layout_marginLeft="40dp"
-        android:inputType="phone" />/>
-
-    <EditText
-        android:id="@+id/wprowadzTelefon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tekst3"
-        android:layout_marginLeft="40dp"
-        android:inputType="phone" />
-
-    <CheckBox
-        android:id="@+id/pelnoletnosc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/wprowadzDate"
-        android:enabled="false" />
-
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="290dp"
+        android:layout_height="81dp"
+        android:layout_below="@+id/cobra"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/shleby" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/pelnoletnosc"
-        android:text="Zaznacz jesli jestes pełoletni" />
+        android:layout_below="@+id/img2"
+        android:layout_marginTop="15dp"
+        android:text="Ford Mustang GTR"
+        android:id="@+id/gtr"/>
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="290dp"
+        android:layout_height="81dp"
+        android:layout_below="@+id/gtr"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/gtr2" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img3"
+        android:layout_marginTop="15dp"
+        android:text="Porshe Cayman"
+        android:id="@+id/cayman"/>
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="290dp"
+        android:layout_height="81dp"
+        android:layout_below="@+id/cayman"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/cayman" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img4"
+        android:layout_marginTop="15dp"
+        android:text="Porshe Cayman"
+        android:id="@+id/klasG"/>
+
+    <ImageView
+        android:id="@+id/img5"
+        android:layout_width="279dp"
+        android:layout_height="69dp"
+        android:layout_below="@+id/klasG"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/klasa_g" />
 
     <Button
-        android:id="@+id/cofnij"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/wprowadzDate"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="100dp"
-        android:text="COFNIJ" />
+        android:layout_below="@id/img5"
+        android:text="cofnij" />
 
     <Button
-        android:id="@+id/dalej"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/wprowadzDate"
-        android:text="Dalej"/>
-
-
+        android:layout_below="@id/img5"
+        android:layout_toRightOf="@id/img5"
+        android:text="Dalej" />
 </RelativeLayout>

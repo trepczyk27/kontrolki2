@@ -15,10 +15,10 @@ public class podsumowanieActivity extends AppCompatActivity {
     private Button dalej;
     private Switch aSwitch;
 
-    private TextView jmarka, jadres, jtelefon ;
+    private TextView jMarka, jadres, jtelefon, jdod;
 
-    String marka,  adres, telefon;
-
+    String marka, model, dodatek,adres, telefon;
+    String dodatki = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +32,21 @@ public class podsumowanieActivity extends AppCompatActivity {
         {
             adres =(String) b.get("Adres");
             telefon =(String) b.get("Telefon");
+            model =(String) b.get("model");
 
             marka =(String) b.get("Kawa");
         }
 
+        ktoreDodatki();
 
-
-        jmarka = findViewById(R.id.tekst2);
+        jMarka = findViewById(R.id.tekst2);
+        jdod = findViewById(R.id.tekst3);
         jadres = findViewById(R.id.tekst5);
         jtelefon = findViewById(R.id.tekst6);
 
 
-        jmarka.setText("Pojazd "+ marka + " ");
+        jMarka.setText("Pojazd "+ marka + " " + " o modelu: ");
+        jdod.setText(dodatki);
         jadres.setText("adres: " + adres);
         jtelefon.setText("telefon: " + telefon);
 
@@ -68,6 +71,22 @@ public class podsumowanieActivity extends AppCompatActivity {
         });
     }
 
+    public void ktoreDodatki(){
+        if(dodatek.contains("Nissan GTR")){
+            dodatki += "- Nissan GTR \n";
+        }
+        if(dodatek.contains("Porshe Cayman")){
+            dodatki += "- Porshe Cayman\n";
+        }
+        if(dodatek.contains("Ford Shelby Cobra")){
+            dodatki += "- Ford Shelby Cobra \n";
+        }
+        if(dodatek.contains("Mercedes AMG GT")){
+            dodatki += "- Mercedes AMG GT \n";
+        }
+        if(dodatek.contains("Mercedes Klasa G<")){
+            dodatki += "- Mercedes Klasa G< \n";
+        }
 
-
+    }
 }

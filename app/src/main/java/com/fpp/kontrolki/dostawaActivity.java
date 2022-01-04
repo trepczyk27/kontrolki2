@@ -11,7 +11,7 @@ import android.widget.EditText;
 public class dostawaActivity extends AppCompatActivity {
 
     private Button cofnij, dalej;
-
+    private EditText adres, telefon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,15 @@ public class dostawaActivity extends AppCompatActivity {
         cofnij = findViewById(R.id.cofnij);
         dalej = findViewById(R.id.dalej);
 
+        adres = findViewById(R.id.wprowadzAdres);
+        telefon = findViewById(R.id.wprowadzTelefon);
 
         dalej.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent next = new Intent(dostawaActivity.this, dodatkiActivity.class);
-
+                Intent next = new Intent(dostawaActivity.this, zdjPojazdow2.class);
+                next.putExtra("Adres", adres.getText().toString());
+                next.putExtra("Telefon", telefon.getText().toString());
                 startActivity(next);
             }
         });
